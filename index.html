@@ -1,1 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
 
+  <!-- Makes the website display correctly on phones and tablets -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Short website description for search engines -->
+  <meta name="description" content="Artist portfolio and selected artworks">
+
+  <title>Artist Name - Portfolio</title>
+
+  <style>
+    :root {
+      --background: #f5f1ea;
+      --card: #ffffff;
+      --text: #24211f;
+      --accent: #a4513d;
+      --muted: #6f6862;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--text);
+      background: var(--background);
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    header {
+      min-height: 70vh;
+      display: grid;
+      place-content: center;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-family: Georgia, serif;
+      font-size: clamp(42px, 8vw, 88px);
+    }
+
+    header p {
+      max-width: 620px;
+      margin: 20px auto;
+      color: var(--muted);
+      font-size: 20px;
+    }
+
+    nav a,
+    .button {
+      display: inline-block;
+      margin: 6px;
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .button {
+      padding: 12px 22px;
+      color: white;
+      background: var(--accent);
+      border-radius: 999px;
+    }
+
+    main {
+      width: min(1100px, 92%);
+      margin: auto;
+    }
+
+    section {
+      padding: 60px 0;
+    }
+
+    h2 {
+      margin-bottom: 28px;
+      font-family: Georgia, serif;
+      font-size: 36px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 22px;
+    }
+
+    .artwork {
+      overflow: hidden;
+      background: var(--card);
+      border-radius: 14px;
+      box-shadow: 0 8px 25px rgb(0 0 0 / 8%);
+    }
+
+    .artwork img {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      display: block;
+      object-fit: cover;
+    }
+
+    .artwork div {
+      padding: 16px;
+    }
+
+    .artwork h3 {
+      margin: 0 0 6px;
+    }
+
+    .artwork p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .about {
+      max-width: 720px;
+      font-size: 18px;
+    }
+
+    .socials a {
+      display: inline-block;
+      margin: 5px 12px 5px 0;
+      color: var(--accent);
+      font-weight: bold;
+    }
+
+    footer {
+      padding: 45px 20px;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        min-height: 60vh;
+      }
+
+      section {
+        padding: 40px 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav aria-label="Main navigation">
+      <a href="#works">Works</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <h1>Artist Name</h1>
+
+    <p>
+      Artist and illustrator creating expressive works inspired by
+      nature, people, and everyday life.
+    </p>
+
+    <a class="button" href="#works">View my work</a>
+  </header>
+
+  <main>
+    <section id="works">
+      <h2>Selected Works</h2>
+
+      <div class="gallery">
+        <article class="artwork">
+          <img
+            src="images/work-1.jpg"
+            alt="Description of the first artwork"
+          >
+          <div>
+            <h3>Artwork Title</h3>
+            <p>Oil on canvas, 2026</p>
+          </div>
+        </article>
+
+        <article class="artwork">
+          <img
+            src="images/work-2.jpg"
+            alt="Description of the second artwork"
+          >
+          <div>
+            <h3>Artwork Title</h3>
+            <p>Watercolor on paper, 2026</p>
+          </div>
+        </article>
+
+        <article class="artwork">
+          <img
+            src="images/work-3.jpg"
+            alt="Description of the third artwork"
+          >
+          <div>
+            <h3>Artwork Title</h3>
+            <p>Digital illustration, 2026</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2>About the Artist</h2>
+
+      <div class="about">
+        <p>
+          Write a few sentences about yourself here. You can describe
+          your artistic practice, preferred techniques, inspirations,
+          exhibitions, and whether you accept commissions.
+        </p>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+
+      <p>
+        For commissions and collaborations:
+        <a href="mailto:artist@example.com">artist@example.com</a>
+      </p>
+
+      <div class="socials">
+        <a
+          href="[instagram.com](https://instagram.com/USERNAME)"
+          target="_blank"
+          rel="noopener noreferrer"
+        >Instagram</a>
+
+        <a
+          href="[t.me](https://t.me/USERNAME)"
+          target="_blank"
+          rel="noopener noreferrer"
+        >Telegram</a>
+
+        <a
+          href="[behance.net](https://behance.net/USERNAME)"
+          target="_blank"
+          rel="noopener noreferrer"
+        >Behance</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 Artist Name. All rights reserved.
+  </footer>
+</body>
+</html>
